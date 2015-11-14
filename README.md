@@ -13,7 +13,7 @@ A Javascript library for comparing images.
 For use JICompare.js the only thing you need to do is copy the file JICompare.js to your webserver. It can be in the root of the site as the example below, or in subdirectories.
 
 ```html
-<script type="text/javascript" src="/JICompare.js" />
+<script type="text/javascript" src="/JICompare.js"></script>
 ```
 
 ## Examples
