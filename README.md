@@ -9,17 +9,35 @@ A Javascript library for comparing images.
 ###Comparing canvas
 
 ```js
+//Take two canvas with the images to compare
 var canvas1 = document.getElementById("canvas1");
 var canvas2 = document.getElementById("canvas2");
-JICompare.Compare(canvas1, canvas2);
+
+//Compare them
+var differenceInfo = JICompare.Compare(canvas1, canvas2);
+
+//Show the number of pixel witch have changed
+alert(differenceInfo.changedPixels);
+
+//Append a canvas with the result of subtract one image from another to the body
+document.getElementsByTagName('body')[0].appendChild(differenceInfo.canvasComponentsDiference);
 ```
 
 ###Comparing chunks
 
 ```js
+//Take two canvas with the images to compare
 var canvas1 = document.getElementById("canvas1");
 var canvas2 = document.getElementById("canvas2");
-JICompare.CompareChunks(canvas1, canvas2, 2, 2);
+
+//Divide the images into a 3x3 grid and compare each chunk
+var differenceInfo = JICompare.CompareChunks(canvas1, canvas2, 3, 3);
+
+//Show the number of pixel witch have changed in the chunk at position 2,2
+alert(differenceInfo[2][2].changedPixels);
+
+//Append a canvas with the result of subtract each chunk at position 1,3 from another to the body
+document.getElementsByTagName('body')[0].appendChild(differenceInfo[1][3].canvasComponentsDiference);
 ```
 
 ##Contact
