@@ -1,5 +1,6 @@
 /**
  * JIcompare.js - A Javascript library for comparing images.
+ *
  * @namespace
  * @license <a href='http://creativecommons.org/licenses/by-nd/4.0/'>Creative Commons Attribution-NoDerivatives 4.0 International License</a>
  * @author Jorge Antón Caballero
